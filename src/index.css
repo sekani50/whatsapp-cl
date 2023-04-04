@@ -1,0 +1,131 @@
+@import "tailwindcss/base";
+
+@import "tailwindcss/components";
+
+@import "tailwindcss/utilities";
+
+@media(max-width:450px) {
+  .chat-track::-webkit-scrollbar {
+    display: none;
+
+  }
+}
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+
+
+html,body {
+  top:0;
+  left:0;
+  height:100%;
+  width:100%;
+  background:#F0F2F5;
+  position:relative;
+  overflow:hidden;
+}
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 18px;
+}
+
+::-webkit-scrollbar-thumb {
+  
+  background-color:grey;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgba(245, 245, 245, 0.5);
+}
+
+.friendList {
+  background-image:url("./assets/testimage/chatbg.png");
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  z-index: -1;
+  background-blend-mode:grey;
+}
+.input-field {
+  @apply border-2 bg-[#F0F2F5] focus:border-gray-400 hover:border-gray-400 sm:rounded-md rounded-sm focus:outline-none w-full h-10 sm:h-12 px-2;
+}
+
+label.label input[type="file"] {
+  position: absolute;
+  top: -1000px;
+}
+.label {
+  cursor: pointer;
+  border: 1px solid white;
+  border-radius: 5px;
+  padding: 5px 15px;
+  margin: 5px;
+  @apply bg-gray-800;
+  display: inline-block;
+}
+
+.label:active {
+  background: #9fa1a0;
+}
+.label:invalid + span {
+  color: rgb(245,0,0);
+}
+.label:valid + span {
+  color: #5cbd95;
+}
+
+.me {
+  @apply flex justify-end items-center text-[#d9fdd3]
+}
+
+#let-chat {
+  @apply block 
+}
+
+#no-chat {
+    @apply hidden
+}
+#show-friendList {
+  @apply block
+}
+#hide-friendList {
+  @apply sm:block hidden
+}
+.reg::-webkit-scrollbar {
+  display: none;
+
+}
+
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
